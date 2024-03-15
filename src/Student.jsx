@@ -1,12 +1,14 @@
-function Student(){
+import React from "react";
+
+function Student(props){
+    const { name, email, picture } = props;
     return(
         <div class="card">
-            <div class="container">
-                <img src="https://imagevars.gulfnews.com/2010/8/7/1_16a07fbf5ee.665173_3655806653_16a07fbf5ee_medium.jpg" alt="Avatar"/>
-                <h2>Jelu Mari Cajipe</h2>
-                <p>fizzybird@gmail.com</p>
-            </div>
+            <img class="image" src={picture} alt="profile" ></img>
+            <h2>{name}</h2>
+            <p>{email}</p>
         </div>
+        
     );
 }
 export default Student
